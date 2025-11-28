@@ -35,6 +35,12 @@
           </button>
 
           <p v-if="error" class="text-xs text-[var(--color-danger)] mt-1">{{ error }}</p>
+          <p
+            v-if="successMessage && !error"
+            class="text-xs text-[var(--color-success)] mt-1"
+          >
+            {{ successMessage }}
+          </p>
         </form>
 
         <p class="mt-4 text-xs text-muted">
@@ -51,20 +57,17 @@ const email = ref('')
 const password = ref('')
 const loading = ref(false)
 const error = ref<string | null>(null)
+const successMessage = ref<string | null>(null)
 
 const router = useRouter()
-const { $supabase } = useNuxtApp()
+const supabase = useSupabaseClient()
 
 const handleSignup = async () => {
-  if (!$supabase) {
-    error.value = 'Connexion Supabase non configurée.'
-    return
-  }
-
   loading.value = true
   error.value = null
+  successMessage.value = null
 
-  const { data, error: authError } = await $supabase.auth.signUp({
+  const { data, error: authError } = await supabase.auth.signUp({
     email: email.value,
     password: password.value,
   })
@@ -77,7 +80,8 @@ const handleSignup = async () => {
   }
 
   if (data.user) {
-    router.push('/today')
+    successMessage.value =
+      "Compte créé ! Va vérifier tes e-mails pour confirmer ton adresse avant de te connecter."
   }
 }
 </script>

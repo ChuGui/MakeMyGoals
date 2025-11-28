@@ -17,13 +17,13 @@ Les cases `- [ ]` seront cochées `- [x]` au fur et à mesure.
 
 ## Phase 1 – Authentification & Profil
 
-- [ ] Intégrer Supabase dans l’app Nuxt (client + variables d’environnement)
-- [ ] Créer les tables d’auth/profil côté Supabase
-  - [ ] `profiles` (lien 1–1 avec `auth.users`)
-- [ ] Créer la page d’inscription `/auth/signup` (email + mot de passe)
-- [ ] Créer la page de connexion `/auth/login`
-- [ ] Mettre en place la gestion de session (user connecté côté front)
-- [ ] Créer une page de profil simple `/profile` (afficher email + quelques préférences)
+- [x] Intégrer Supabase dans l’app Nuxt (client + variables d’environnement)
+- [x] Créer les tables d’auth/profil côté Supabase
+  - [x] `profiles` (lien 1–1 avec `auth.users`)
+- [x] Créer la page d’inscription `/auth/signup` (email + mot de passe)
+- [x] Créer la page de connexion `/auth/login`
+- [x] Mettre en place la gestion de session (user connecté côté front)
+- [x] Créer une page de profil simple `/profile` (afficher email + quelques préférences)
 
 ---
 

@@ -2,12 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/supabase'],
   css: ['@/assets/main.css'],
-  runtimeConfig: {
-    public: {
-      supabaseUrl: process.env.NUXT_SUPABASE_URL,
-      supabaseAnonKey: process.env.NUXT_SUPABASE_ANON_KEY,
-    },
+  supabase: {
+    redirect: false,
   },
 })
