@@ -21,13 +21,13 @@
           </p>
 
           <div class="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
-            <button type="button" class="btn btn-primary">
+            <NuxtLink to="/auth/signup" class="btn btn-primary">
               Créer mon compte
-            </button>
+            </NuxtLink>
 
-            <button type="button" class="btn btn-ghost">
-              Découvrir
-            </button>
+            <NuxtLink to="/auth/login" class="btn btn-ghost">
+              Se connecter
+            </NuxtLink>
           </div>
         </div>
 
@@ -176,9 +176,9 @@
         <p class="text-sm mb-4 text-muted">
           Commence avec un premier objectif et laisse MakeMyGoals organiser la suite.
         </p>
-        <button type="button" class="btn btn-primary">
+        <NuxtLink to="/auth/signup" class="btn btn-primary">
           Créer mon compte maintenant
-        </button>
+        </NuxtLink>
         <p class="mt-2 text-xs text-muted">
           Gratuit au lancement.
         </p>

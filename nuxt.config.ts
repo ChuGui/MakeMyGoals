@@ -4,4 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['@/assets/main.css'],
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.NUXT_SUPABASE_URL,
+      supabaseAnonKey: process.env.NUXT_SUPABASE_ANON_KEY,
+    },
+  },
 })

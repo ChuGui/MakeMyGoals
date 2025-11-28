@@ -14,13 +14,14 @@
         <a href="#how" class="hover:underline">Comment ça marche</a>
         <a href="#value" class="hover:underline">Pourquoi ?</a>
         <a href="#preview" class="hover:underline">Aperçu</a>
+        <NuxtLink to="/auth/login" class="text-[var(--color-text)] hover:underline">Connexion</NuxtLink>
       </nav>
 
       <!-- Desktop CTA -->
       <div class="hidden sm:block">
-        <button type="button" class="btn btn-primary text-xs sm:text-sm">
+        <NuxtLink to="/auth/signup" class="btn btn-primary text-xs sm:text-sm">
           Créer mon compte
-        </button>
+        </NuxtLink>
       </div>
 
       <!-- Mobile menu button -->
@@ -47,15 +48,20 @@
           <li>
             <a href="#preview" class="hover:underline" @click="isOpen = false">Aperçu</a>
           </li>
+          <li>
+            <NuxtLink to="/auth/login" class="hover:underline" @click="isOpen = false">
+              Connexion
+            </NuxtLink>
+          </li>
         </ul>
 
-        <button
-          type="button"
+        <NuxtLink
+          to="/auth/signup"
           class="btn btn-primary mt-4 w-full text-sm"
           @click="isOpen = false"
         >
           Créer mon compte
-        </button>
+        </NuxtLink>
       </nav>
     </div>
   </header>
